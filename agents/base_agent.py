@@ -10,6 +10,6 @@ class BaseAgent(ABC):
     async def generate_response(self, query: str, context: Optional[List[Dict]] = None) -> str:
         pass
 
-    async def generate(self, prompt: str) -> str | None:
+    async def generate(self, prompt: str) -> Optional[str]:
         # Implementation for LLM generation
         pass

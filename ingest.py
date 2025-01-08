@@ -24,7 +24,7 @@ index = Index(
 
 async def get_embedding(text: str):
     """Get embedding for text using OpenAI API"""
-    response = client.embeddings.create(
+    response = await client.embeddings.create(
         model="text-embedding-3-small",
         input=text
     )
@@ -48,17 +48,17 @@ async def index_movie_data():
         # Index each movie
         for _, movie in df.iterrows():
             spinner.text = f"Indexing movie: {movie['Title']}"
-
             # Create text representation
             text = f"{movie['Title']}. {movie['Genre']}. {movie['Description']}"
 
             try:
                 # Get embedding for the text
                 embedding = await get_embedding(text)
-                vectors.append({
-                           "id": movie['Title'],
-                           "vector": embedding
-                       })
+                vector_entry = (str(movie['Title']), embedding)
+                # Validate structure before adding
+                if not isinstance(vector_entry, tuple):
+                    raise ValueError("Vector must be a tuple of (id, embedding)")
+                vectors.append(vector_entry)
 
             except Exception as error:
                 spinner.fail(f"Error indexing movie {movie['Title']}")
@@ -68,6 +68,7 @@ async def index_movie_data():
         # Batch upsert
         if vectors:
             spinner.text = "Upserting vectors to database..."
+            print(f"First vector in batch: {vectors[0]}")  # Debug print
             index.upsert(vectors=vectors)
 
         spinner.succeed('Finished indexing movie data')
