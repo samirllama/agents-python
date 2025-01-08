@@ -142,6 +142,13 @@ pip install -r requirements.txt
 python -m pytest
 ```
 
+## Core flow of the project:
+```
+rag_trial.py → RAGAgent → VectorStore → Upstash Vector Index
+                      ↓
+                OpenAI API
+```
+
 ## 🔗 Contact
 
 samirllama@gmail.com

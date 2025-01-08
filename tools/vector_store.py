@@ -1,5 +1,5 @@
 # tools/vector_store.py
-from typing import List, Dict, Optional
+from typing import List, Dict
 from upstash_vector import Index
 from utils.db import MetadataDB
 

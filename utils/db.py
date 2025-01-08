@@ -1,7 +1,7 @@
 # agents-python/utils/db.py
 import sqlite3
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 class MetadataDB:
     def __init__(self):
@@ -46,7 +46,7 @@ class MetadataDB:
         ))
         self.conn.commit()
 
-    def get_metadata(self, title: str) -> Dict[str, Any] | None:
+    def get_metadata(self, title: str) -> Optional[Dict[str, Any]]:
         """Retrieve metadata for a movie"""
         self.cursor.execute('SELECT * FROM metadata WHERE title = ?', (title,))
         row = self.cursor.fetchone()

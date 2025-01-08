@@ -1,0 +1,11 @@
+{
+  "include": ["agents-python"],
+  "exclude": ["**/node_modules", "**/__pycache__"],
+  "typeCheckingMode": "basic",
+  "useLibraryCodeForTypes": true,
+  "reportMissingTypeStubs": false,
+  "pythonVersion": "3.8", // Adjust to your Python version
+  "venvPath": ".venv",
+  "strictParameterNoneValue": true,
+  "reportOptionalMemberAccess": false
+}
