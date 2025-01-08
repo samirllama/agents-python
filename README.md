@@ -90,7 +90,7 @@ python -m evals.run
 
 ## 🏗️ Project Structure
 
-```json
+```
 agents-python/
 ├── agents/             # Core agent logic
 │   ├── base_agent.py   # Abstract base class for agents
@@ -99,13 +99,13 @@ agents-python/
 │   └── vector_store.py # Vector storage operations
 ├── evals/              # Evaluation framework
 │   ├── experiments/    # Test scenarios
-│   ├── scorers.py     # Scoring mechanisms
-│   └── run.py         # Evaluation runner
-├── utils/              # Helper utilities
-│   └── db.py          # Database operations
-├── data/              # Data storage
-├── ingest.py          # Data ingestion script
-└── main.py            # Entry point
+│   ├── scorers.py      # Scoring mechanisms
+│   └── run.py          # Evaluation runner
+├── utils/
+│   └── db.py           # Database operations
+├── data/               # Data storage
+├── ingest.py           # Data ingestion script
+└── main.py             # Entry point
 ```
 
 ## 🔄 Current Status
