@@ -2,6 +2,20 @@
 
 A sophisticated AI Agents framework built with Python, demonstrating advanced implementation of autonomous agents using Large Language Models (LLMs). This project showcases modern AI techniques including Retrieval Augmented Generation (RAG), evaluation systems, and CLI tools.
 
+![Python Version](https://img.shields.io/badge/python-3.13%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-under%20development-yellow)
+
+## 📑 Table of Contents
+- [Features](#-features)
+- [Technology Stack](#️-technology-stack)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Project Structure](#️-project-structure)
+- [Current Status](#-current-status)
+- [Contact](#-contact)
+
 ## 🚀 Features
 
 - **Modular Agent Architecture**: Extensible base agent class for building specialized AI agents
@@ -31,7 +45,7 @@ A sophisticated AI Agents framework built with Python, demonstrating advanced im
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/agents-python.git
+git clone https://github.com/samirllama/agents-python.git
 cd agents-python
 ```
 
@@ -76,7 +90,7 @@ python -m evals.run
 
 ## 🏗️ Project Structure
 
-```
+```json
 agents-python/
 ├── agents/             # Core agent logic
 │   ├── base_agent.py   # Abstract base class for agents
@@ -107,21 +121,37 @@ Coming soon:
 - Enhanced CLI tools
 - Additional example implementations
 
+## 🛠 Development
 
-## 📝 License
+### Setting up Development Environment
+```bash
+# Clone the repository
+git clone https://github.com/samirllama/agents-python.git
+cd agents-python
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate
+
+# Install development dependencies
+pip install -r requirements.txt
+```
+
+### Running Tests
+```bash
+python -m pytest
+```
 
 ## 🔗 Contact
 
-samirllama@gmail.com - [LinkedIn]
-Project Link: [https://github.com/samirllama/agents-python)
+samirllama@gmail.com
+[LinkedIn]
+Project Link: [https://github.com/samirllama/agents-python](https://github.com/samirllama/agents-python)
 
 ## 🙏 Acknowledgments
 
 - OpenAI for their powerful language models
 - Upstash for their vector database solution
-- The open-source community for inspiration and tools
 
 ---
 
